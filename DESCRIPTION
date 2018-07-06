@@ -1,10 +1,13 @@
 Package: aaegdata
-Title: What the Package Does (one line, title case)
+Title: Aedes aegypti Mosquitoes Molecular Information
 Version: 0.1.0
 Authors@R: person("Lucio", "Rezende Queiroz", 
                                     email = "luciorqueiroz@gmail.com",
                                     role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: This is a data package containing Aedes aegypti vector mosquitoes 
+             biological relevant molecular and biochemical data. Data colected from 
+             public available databases and presented here in a clean, structured and
+             ready to use format.
 Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
