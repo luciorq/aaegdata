@@ -1,7 +1,7 @@
 #' @title aaegL5.1 Gene symbol Conversion Dataset
 #'
 #' @description This dataset is used to convert gene symbols used in different
-#'              databases, e.g. NCBI Gene, KEGG, emsembl and VectorBase.
+#'              databases, e.g. NCBI Gene, KEGG, ensembl and VectorBase.
 #'
 #' @format a \code{tibble} with X column which are:
 #' \describe{
@@ -11,4 +11,4 @@
 #' }
 #' @source \url{https://www.vectorbase.org/}
 #'
-"aaegl51_symbol_conversion"
+#"aaegl51_symbol_conversion"
