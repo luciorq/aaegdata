@@ -67,7 +67,6 @@ aaegdata::annotation_conversion %>%
 
 ``` r
 ## Using gene AAEL000986
-library(dplyr)
 aaegdata::go_gene_sets %>%
   dplyr::filter(gene == "AAEL000986") %>%
   dplyr::select( -gene)
@@ -85,7 +84,6 @@ aaegdata::go_gene_sets %>%
 ### Checking gene description by part of name
 
 ``` r
-library(dplyr)
 library(stringr)
 aaegdata::gene_description %>%
   dplyr::filter( stringr::str_detect( gene_name, "Rpl")  )
@@ -95,6 +93,18 @@ aaegdata::gene_description %>%
 #> 1 AAEL000010 60S ribosomal protein L36 [Source:UniProtKB/TrEMBL… Rpl36-1  
 #> 2 AAEL000823 60S ribosomal protein L35A, putative [Source:UniPr… Rpl35    
 #> 3 AAEL002639 60S ribosomal protein L36 [Source:UniProtKB/TrEMBL… Rpl36-2
+```
+
+### Computed homology in the closest model organism (*D. melanogaster*)
+
+``` r
+aaegdata::aaeg_dmel_orthologs %>%
+  dplyr::filter( gene == "AAEL000986")
+#> # A tibble: 1 x 6
+#>   gene     dmel_gene   dmel_gene_name dmel_homology_ty… dmel_to_aaeg_iden…
+#>   <chr>    <chr>       <chr>          <chr>                          <dbl>
+#> 1 AAEL000… FBgn0029888 ND-ASHI        ortholog_one2one                56.3
+#> # ... with 1 more variable: aaeg_to_dmel_identity <dbl>
 ```
 
 ------------------------------------------------------------------------

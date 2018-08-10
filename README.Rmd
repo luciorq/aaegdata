@@ -49,7 +49,6 @@ aaegdata::annotation_conversion %>%
 
 ```{r go_gene}
 ## Using gene AAEL000986
-library(dplyr)
 aaegdata::go_gene_sets %>%
   dplyr::filter(gene == "AAEL000986") %>%
   dplyr::select( -gene)
@@ -59,10 +58,16 @@ aaegdata::go_gene_sets %>%
 ### Checking gene description by part of name
 
 ```{r gene_description}
-library(dplyr)
 library(stringr)
 aaegdata::gene_description %>%
   dplyr::filter( stringr::str_detect( gene_name, "Rpl")  )
+```
+
+### Computed homology in the closest model organism (*D. melanogaster*)
+
+```{r homology}
+aaegdata::aaeg_dmel_orthologs %>%
+  dplyr::filter( gene == "AAEL000986")
 ```
 
 ----
