@@ -17,8 +17,8 @@ aaegl51_description <- aaegl51_gene_tx_description %>%
   dplyr::rename(description = `Gene description`) %>%
   dplyr::rename(gene_name = `Gene name`)
 
-
-usethis::use_data(aaegl51_description, overwrite = TRUE, compress = "xz")
+gene_description <- aaegl51_description
+usethis::use_data(gene_description, overwrite = TRUE, compress = "xz")
 
 ## tx2gene
 aaegl51_tx2gene <- aaegl51_gene_tx_description %>%
@@ -28,7 +28,8 @@ aaegl51_tx2gene <- aaegl51_gene_tx_description %>%
   dplyr::rename(TXNAME = `Transcript stable ID`) %>%
   dplyr::rename(GENEID = `Gene stable ID`)
 
-usethis::use_data(aaegl51_tx2gene, overwrite = TRUE, compress = "xz")
+transcript_to_gene <- aaegl51_tx2gene
+usethis::use_data(transcript_to_gene, overwrite = TRUE, compress = "xz")
 
 ## Vectorbase to NCBI genes
 aaegl51_ncbi <- readr::read_csv("data-raw/vectorbase/aaegl51_vectorbase_gene_ncbi.csv")

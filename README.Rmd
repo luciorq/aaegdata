@@ -30,19 +30,39 @@ install.packages("aaegdata")
 # install.packages("devtools")
 devtools::install_github("luciorq/aaegdata")
 ```
-## Example
+## Examples
 
-This is a basic example which shows you how to solve a common problem:
+Those are basic examples which shows you how to solve common problems:
 
-```{r example}
-## Check first 15 genes that changed annotation
+### Check first 15 genes that changed in annotation in AaegL5.1
 
+```{r annotation_conversion}
 library(dplyr)
 
 aaegdata::annotation_conversion %>%
   dplyr::filter( !is.na(gene_aaegl35) & !is.na(gene_aaegl51)) %>%
   dplyr::filter( gene_aaegl35 != gene_aaegl51 ) %>%
   head(15)
+```
+
+### Retrieving gene ontologies for a gene
+
+```{r go_gene}
+## Using gene AAEL000986
+library(dplyr)
+aaegdata::go_gene_sets %>%
+  dplyr::filter(gene == "AAEL000986") %>%
+  dplyr::select( -gene)
+
+```
+
+### Checking gene description by part of name
+
+```{r gene_description}
+library(dplyr)
+library(stringr)
+aaegdata::gene_description %>%
+  dplyr::filter( stringr::str_detect( gene_name, "Rpl")  )
 ```
 
 ----

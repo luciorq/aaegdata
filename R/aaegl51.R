@@ -11,12 +11,12 @@
 #' }
 #' @source \url{http://biomart.vectorbase.org/biomart/}
 #'
-"aaegl51_description"
+"gene_description"
 
 #' @title Transcript to Gene Level Conversion Table
 #'
 #' @description Dataset used to convert transcript level to gene level analysis
-#'   for the Aedes aegypti AaegL5.1.
+#'   for the Aedes aegypti AaegL5.1 - TX2GENE.
 #'
 #' @format a \code{tibble} with 2 column which are:
 #' \describe{
@@ -25,4 +25,4 @@
 #' }
 #' @source \url{http://biomart.vectorbase.org/biomart/}
 #'
-"aaegl51_tx2gene"
+"transcript_to_gene"

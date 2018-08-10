@@ -21,14 +21,14 @@ You can install the development version from [GitHub](https://github.com/) with:
 devtools::install_github("luciorq/aaegdata")
 ```
 
-Example
--------
+Examples
+--------
 
-This is a basic example which shows you how to solve a common problem:
+Those are basic examples which shows you how to solve common problems:
+
+### Check first 15 genes that changed in annotation in AaegL5.1
 
 ``` r
-## Check first 15 genes that changed annotation
-
 library(dplyr)
 #> 
 #> Attaching package: 'dplyr'
@@ -61,6 +61,40 @@ aaegdata::annotation_conversion %>%
 #> 13 AAEL000083   AAEL019508  
 #> 14 AAEL000086   AAEL026937  
 #> 15 AAEL000093   AAEL025818
+```
+
+### Retrieving gene ontologies for a gene
+
+``` r
+## Using gene AAEL000986
+library(dplyr)
+aaegdata::go_gene_sets %>%
+  dplyr::filter(gene == "AAEL000986") %>%
+  dplyr::select( -gene)
+#> # A tibble: 6 x 2
+#>   gene_ontology                                           go_domain       
+#>   <chr>                                                   <chr>           
+#> 1 GO:0003954_NADH dehydrogenase activity                  molecular_funct…
+#> 2 GO:0005739_mitochondrion                                cellular_compon…
+#> 3 GO:0005747_mitochondrial respiratory chain complex I    cellular_compon…
+#> 4 GO:0006120_mitochondrial electron transport, NADH to u… biological_proc…
+#> 5 GO:0008137_NADH dehydrogenase (ubiquinone) activity     molecular_funct…
+#> 6 GO:0016021_integral component of membrane               cellular_compon…
+```
+
+### Checking gene description by part of name
+
+``` r
+library(dplyr)
+library(stringr)
+aaegdata::gene_description %>%
+  dplyr::filter( stringr::str_detect( gene_name, "Rpl")  )
+#> # A tibble: 3 x 3
+#>   gene       description                                         gene_name
+#>   <chr>      <chr>                                               <chr>    
+#> 1 AAEL000010 60S ribosomal protein L36 [Source:UniProtKB/TrEMBL… Rpl36-1  
+#> 2 AAEL000823 60S ribosomal protein L35A, putative [Source:UniPr… Rpl35    
+#> 3 AAEL002639 60S ribosomal protein L36 [Source:UniProtKB/TrEMBL… Rpl36-2
 ```
 
 ------------------------------------------------------------------------
