@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 # aaegdata
 
-This is a data package containing Aedes aegypti vector mosquitoes biological relevant molecular and biochemical data. Data colected from public available databases and presented here in a clean, structured and ready to use format. The consistent format used for the data allows the use of modern syntax and tools to be used with this package. 
+This is a data package containing *Aedes aegypti* vector mosquitoes biological relevant molecular and biochemical data. Data colected from public available databases and presented here in a clean, structured and ready to use format. The consistent format used for the data allows the use of modern syntax and tools to be used with this package. 
 
 ## Installation
 
@@ -35,7 +35,14 @@ devtools::install_github("luciorq/aaegdata")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-## basic example code
+## Check first 15 genes that changed annotation
+
+library(dplyr)
+
+aaegdata::annotation_conversion %>%
+  dplyr::filter( !is.na(gene_aaegl35) & !is.na(gene_aaegl51)) %>%
+  dplyr::filter( gene_aaegl35 != gene_aaegl51 ) %>%
+  head(15)
 ```
 
 ----
