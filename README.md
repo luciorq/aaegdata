@@ -26,7 +26,7 @@ Examples
 
 Those are basic examples which shows you how to solve common problems:
 
-### Check first 15 genes that changed in annotation in AaegL5.1
+### Check first 15 genes that changed annotation in AaegL5.1
 
 ``` r
 library(dplyr)
