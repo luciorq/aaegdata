@@ -3,6 +3,8 @@
 aaegdata
 ========
 
+[![DOI](https://zenodo.org/badge/138066714.svg)](https://zenodo.org/badge/latestdoi/138066714)
+
 This is a data package containing *Aedes aegypti* vector mosquitoes biological relevant molecular and biochemical data. Data colected from public available databases and presented here in a clean, structured and ready to use format. The consistent format used for the data allows the use of modern syntax and tools to be used with this package.
 
 Installation
