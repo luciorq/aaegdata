@@ -6,3 +6,4 @@
 ^README-.*\.png$
 ^LICENSE\.md$
 ^CODE_OF_CONDUCT\.md$
+data\*_string_ppi.rda

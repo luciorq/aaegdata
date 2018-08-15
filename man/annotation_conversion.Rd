@@ -9,6 +9,9 @@
   \item{gene_aaegl35}{Gene stable identifiers for the AaegL3.5 gene models}
   \item{gene_aaegl51}{Gene stable identifiers for the AaegL5.1 gene models}
 }}
+\source{
+\url{https://www.vectorbase.org}
+}
 \usage{
 annotation_conversion
 }

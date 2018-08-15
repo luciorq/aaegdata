@@ -26,10 +26,11 @@ install.packages("aaegdata")
 -->
  You can install the development version from [GitHub](https://github.com/) with:
 
-``` r
+```r
 # install.packages("devtools")
 devtools::install_github("luciorq/aaegdata")
 ```
+
 ## Examples
 
 Those are basic examples which shows you how to solve common problems:
@@ -60,7 +61,7 @@ aaegdata::go_gene_sets %>%
 ```{r gene_description}
 library(stringr)
 aaegdata::gene_description %>%
-  dplyr::filter( stringr::str_detect( gene_name, "Rpl")  )
+  dplyr::filter( stringr::str_detect( gene_name, "Rpl") )
 ```
 
 ### Computed homology in the closest model organism (*D. melanogaster*)
