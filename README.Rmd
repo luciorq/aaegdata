@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 ```
 
 
-# aaegdata <img src="man/figures/aaegdata_logo.svg" align="right" />
+# aaegdata <img src="man/figures/aaegdata_logo.png" align="right" height=140 />
 
 [![DOI](https://zenodo.org/badge/138066714.svg)](https://zenodo.org/badge/latestdoi/138066714)
 
