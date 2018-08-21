@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-aaegdata <img src="man/figures/aaegdata_logo.svg", align="right" />
-===================================================================
+aaegdata <img src="man/figures/aaegdata_logo.svg" align="right" />
+==================================================================
 
 [![DOI](https://zenodo.org/badge/138066714.svg)](https://zenodo.org/badge/latestdoi/138066714)
 
