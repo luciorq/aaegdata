@@ -1,7 +1,7 @@
 #' @title KEGG Pathways Gene Sets
 #'
 #' @description This dataset contains the Aedes aegypti genes from
-#'   each KEGG Pathway in a tidy format.
+#'   each KEGG Pathway in a tidy format.AaegL5.1
 #'
 #' @format a \code{tibble} with 2 column which are:
 #' \describe{
@@ -16,7 +16,7 @@
 #'
 #' @description This dataset contains the Aedes aegypti genes from
 #'   each KEGG Pathway in a list format,
-#'   required for some bioconductor packages.
+#'   required for some bioconductor packages. AaegL5.1
 #'
 #' @format a named \code{list} which each element is a KEGG Pathway, containg a
 #'   vector of the VectorBase genes for each pathway

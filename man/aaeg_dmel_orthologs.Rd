@@ -24,6 +24,6 @@ aaeg_dmel_orthologs
 This dataset contains the Drosophila melanogaster fruitfly
   orthologous genes to Aedes aegypti genes with the orthology type and
   percent identity from D. melanogaster to A. aegypti and from A. aegypti to
-  D. melanogaster, in a data frame.
+  D. melanogaster, in a data frame. AaegL5.1
 }
 \keyword{datasets}

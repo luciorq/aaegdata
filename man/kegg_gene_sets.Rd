@@ -17,6 +17,6 @@ kegg_gene_sets
 }
 \description{
 This dataset contains the Aedes aegypti genes from
-  each KEGG Pathway in a tidy format.
+  each KEGG Pathway in a tidy format.AaegL5.1
 }
 \keyword{datasets}

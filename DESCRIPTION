@@ -1,13 +1,13 @@
 Package: aaegdata
 Title: Aedes aegypti Mosquitoes Molecular Information
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: person("Lucio", "Rezende Queiroz", 
                   email = "luciorqueiroz@gmail.com",
                   role = c("aut", "cre"),
                   comment = c(ORCID = "0000-0002-6090-1834")
            )
 Description: This is a data package containing Aedes aegypti vector mosquitoes 
-             biological relevant molecular and biochemical data. Data colected from 
+             biologically relevant molecular and biochemical data. Data colected from 
              public available databases and presented here in a clean, structured and
              ready to use format.
 Depends: R (>= 3.3.0)

@@ -18,6 +18,6 @@ go_gene_sets
 }
 \description{
 This dataset contains the Aedes aegypti genes from
-  each Gene Ontology in a tidy format.
+  each Gene Ontology in a tidy format. AaegL5.1
 }
 \keyword{datasets}

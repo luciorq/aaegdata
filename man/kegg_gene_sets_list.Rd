@@ -15,6 +15,6 @@ kegg_gene_sets_list
 \description{
 This dataset contains the Aedes aegypti genes from
   each KEGG Pathway in a list format,
-  required for some bioconductor packages.
+  required for some bioconductor packages. AaegL5.1
 }
 \keyword{datasets}
