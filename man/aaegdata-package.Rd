@@ -13,6 +13,14 @@ This is a data package containing Aedes aegypti vector mosquitoes
              public available databases and presented here in a clean, structured and
              ready to use format.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/luciorq/aaegdata}
+  \item Report bugs at \url{https://github.com/luciorq/aaegdata/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Lucio Rezende Queiroz \email{luciorqueiroz@gmail.com} (0000-0002-6090-1834)
 

@@ -8,7 +8,7 @@ library(dplyr)
 
 
 ## Drosophila melanogaster data:
-dmel_ppi_df <- readr::read_table2("data-raw/ppi/7227.protein.links.v10.5.txt")
+dmel_ppi_df <- readr::read_table2(fs::path("~","projects","aaegdata","data-raw","ppi","7227.protein.links.v10.5.txt"))
 
 dmel_ppi_df <- dmel_ppi_df %>%
   dplyr::mutate(protein1 = stringr::str_remove(protein1, "^7227\\.")) %>%
@@ -17,7 +17,7 @@ dmel_ppi_df <- dmel_ppi_df %>%
 
 dmel_string_ppi <- dmel_ppi_df
 
-#usethis::use_data(dmel_string_ppi, overwrite = TRUE, compress = "xz")
+# usethis::use_data(dmel_string_ppi, overwrite = TRUE, compress = "xz")
 
 
 ## Aedes aegypti data:
@@ -32,5 +32,4 @@ aaeg_ppi_df <- aaeg_ppi_df %>%
 
 aaeg_string_ppi <- aaeg_ppi_df
 
-#usethis::use_data(aaeg_string_ppi, overwrite = TRUE, compress = "xz")
-
+# usethis::use_data(aaeg_string_ppi, overwrite = TRUE, compress = "xz")

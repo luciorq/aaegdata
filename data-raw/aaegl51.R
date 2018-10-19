@@ -34,19 +34,15 @@ usethis::use_data(transcript_to_gene, overwrite = TRUE, compress = "xz")
 ## Vectorbase to NCBI genes
 aaegl51_ncbi <- readr::read_csv("data-raw/vectorbase/aaegl51_vectorbase_gene_ncbi.csv")
 aaegl51_ncbi
-#aaegl51_ncbi %>%
+# aaegl51_ncbi %>%
 #  dplyr::filter(`NCBI gene ID` == 33307548)
-#aaegl51_description %>%
+# aaegl51_description %>%
 #  dplyr::filter(`Gene stable ID` == "AAEL018681")
 
 ## KEGG Pathways - incomplete
 aaegl51_kegg_df <- readr::read_csv("data-raw/vectorbase/aaegl51_vectorbase_kegg.csv")
 aaegl51_kegg_df %>%
   dplyr::filter(!is.na(`KEGG Pathway and Enzyme ID`)) %>%
-  tidyr::separate(`KEGG Pathway and Enzyme ID`,c("KEGG", "enzyme_id")) %>%
-  dplyr::select( -enzyme_id )
-#readr::read_rds("data-raw/gene_sets/aag_kegg_gene_sets.rds")
-
-
-
-
+  tidyr::separate(`KEGG Pathway and Enzyme ID`, c("KEGG", "enzyme_id")) %>%
+  dplyr::select(-enzyme_id)
+# readr::read_rds("data-raw/gene_sets/aag_kegg_gene_sets.rds")

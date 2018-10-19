@@ -6,7 +6,7 @@
 library(dplyr)
 aaegl51_go <- readr::read_csv("data-raw/vectorbase/aaegl51_vectorbase_go.csv")
 aaegl51_go_df <- aaegl51_go %>%
-  dplyr::arrange(`GO term accession`,`Gene stable ID`) %>%
+  dplyr::arrange(`GO term accession`, `Gene stable ID`) %>%
   dplyr::filter(!is.na(`GO term accession`)) %>%
   tidyr::unite(GO, `GO term accession`, `GO term name`) %>%
   dplyr::rename(gene_ontology = GO) %>%
@@ -16,7 +16,7 @@ aaegl51_go_df <- aaegl51_go %>%
   dplyr::distinct()
 
 temp_list <- aaegl51_go_df %>%
-  dplyr::select( -go_domain) %>%
+  dplyr::select(-go_domain) %>%
   dplyr::group_by(gene_ontology) %>%
   dplyr::summarise(gene = list(gene))
 
